@@ -24,7 +24,7 @@ sample_data(phylo)$Group
 set.seed(5)
 dist <- phyloseq::distance(phylo, method = "bray")
 perma <- adonis2(dist~Group, data = as(sample_data(phylo), "data.frame"), permutations = 999)
-perma# p = 0.003
+perma
 
 
 bray1 <- ordinate(phylo, "PCoA", "bray")
